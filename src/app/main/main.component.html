@@ -1,0 +1,42 @@
+<div class="pusher">
+  <div class="ui segment header">
+    <h1>Recepten</h1>
+  </div>
+</div>
+<div class="pusher">
+  <div class="ui segment header">
+    <div class="ui segment">
+    <ul>
+      <li *ngFor="let meal of meals.meals">{{ meal.name }}</li>
+    </ul> 
+    </div>
+  </div>
+</div>
+<div class="pusher">
+  <div class="ui segment header">
+    <h1>Aldi Ingredienten</h1>
+  </div>
+</div>
+<div class="pusher">
+  <div class="ui segment header">
+    <div class="ui segment">
+    <ul>
+      <li *ngFor="let ingr of ingrAldiList">{{ ingr }}</li>
+    </ul> 
+    </div>
+  </div>
+</div>
+<div class="pusher">
+  <div class="ui segment header">
+    <h1>Carrefour Ingredienten</h1>
+  </div>
+</div>
+<div class="pusher">
+  <div class="ui segment header">
+    <div class="ui segment">
+    <ul>
+      <li *ngFor="let ingr of ingrCarrList">{{ ingr }}</li>
+    </ul> 
+    </div>
+  </div>
+</div>
