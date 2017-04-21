@@ -1,0 +1,30 @@
+<div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="ten wide column centered">
+          <div class="ui blue segment header">
+            <h1>Carrefour Ingrediënten</h1>
+          </div>
+
+          <table class="ui blue table">
+            <thead>
+              <tr>
+                <th>Naam</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ingr of ingrCarr">
+                <td class="selectable">
+                  <a href="" class="">{{ingr.name}}</a>
+                </td>
+                <td class="selectable">
+                  <a href="" class="">{{getLabel(ingr.label)}}</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </div>
+  </div>
