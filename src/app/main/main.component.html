@@ -1,42 +1,91 @@
 <div class="pusher">
-  <div class="ui segment header">
-    <h1>Recepten</h1>
-  </div>
-</div>
-<div class="pusher">
-  <div class="ui segment header">
-    <div class="ui segment">
-    <ul>
-      <li *ngFor="let meal of meals.meals">{{ meal.name }}</li>
-    </ul> 
+  <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="item">Gerechten</a>
+        <a class="item">Ingrediënten Aldi</a>
+        <a class="item">Ingrediënten Carrefour</a>
+      </div>
+    </div>
+    <div class="ui text container">
+      <h1 class="ui inverted header">JEDSMUMC</h1>
+      <h3 class="ui inverted header">a.k.a. Joeri-en-Dorien's-Super-Mega-Ultra-Menu-Creator</h3>
     </div>
   </div>
-</div>
-<div class="pusher">
-  <div class="ui segment header">
-    <h1>Aldi Ingredienten</h1>
-  </div>
-</div>
-<div class="pusher">
-  <div class="ui segment header">
-    <div class="ui segment">
-    <ul>
-      <li *ngFor="let ingr of ingrAldiList">{{ ingr }}</li>
-    </ul> 
-    </div>
-  </div>
-</div>
-<div class="pusher">
-  <div class="ui segment header">
-    <h1>Carrefour Ingredienten</h1>
-  </div>
-</div>
-<div class="pusher">
-  <div class="ui segment header">
-    <div class="ui segment">
-    <ul>
-      <li *ngFor="let ingr of ingrCarrList">{{ ingr }}</li>
-    </ul> 
+
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="ten wide column centered">
+          <div class="ui segment red header">
+            <h1>Menu</h1>
+          </div>
+
+          <table class="ui red table">
+            <tbody>
+              <tr *ngFor="let meal of menu">
+                <td class="selectable">
+                  <a href="#"
+                  (click)="this.removeFromMenu(meal)">{{ meal.name }}</a>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ten wide column centered">
+          <div class="ui segment yellow header">
+            <h1>Recepten</h1>
+          </div>
+
+          <table class="ui yellow table">
+            <tbody>
+              <tr *ngFor="let meal of meals.meals">
+                <td class="selectable">
+                  <a href="#"
+                  (click)="this.addToMenu(meal)">{{ meal.name }}</a>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ten wide column centered">
+          <div class="ui teal segment header">
+            <h1>Aldi Ingrediënten</h1>
+          </div>
+
+          <table class="ui teal table">
+            <tbody>
+              <tr *ngFor="let ingr of ingrAldiList">
+                <td class="selectable">
+                  <a href="" class="">{{ingr}}</a>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ten wide column centered">
+          <div class="ui blue segment header">
+            <h1>Carrefour Ingrediënten</h1>
+          </div>
+          <table class="ui blue table">
+            <tbody>
+              <tr *ngFor="let ingr of ingrCarrList">
+                <td class="selectable">
+                  <a href="" class="">{{ingr}}</a>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
