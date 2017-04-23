@@ -1,5 +1,19 @@
 # Rdmenu
 
+## Run locally
+start by running `npm install` to get the dependencies  
+install mongodb `brew install mongodb`  
+make a folder for mongo to store the databases `mkdir -p /data/db`  
+change the permissions of the folder accordingly to allow read/write access to mongo
+`sudo chmod 755 .` in the /data/db folder
+
+Run the mongo daemon in a separate terminal window, by running `mongod`
+
+Run `npm start` to build the angular dist folder and start the server on port 8080
+
+
+## Auto generated Angular2 Readme below
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
