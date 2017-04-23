@@ -29,12 +29,12 @@ export class CarrService {
   carrIngr: CarrIngr[];
 
   constructor() {
-    this.carrIngr = [
-      new CarrIngr(1, 'Schnitzel', CarrLabel.Vlees),
-      new CarrIngr(2, 'Wortelen', CarrLabel.Groente),
-      new CarrIngr(3, 'Eieren', CarrLabel.Andere),
-      new CarrIngr(4, 'Melk', CarrLabel.Zuivel)
-    ]
+    // this.carrIngr = [
+    //   new CarrIngr(1, 'Schnitzel', CarrLabel.Vlees),
+    //   new CarrIngr(2, 'Wortelen', CarrLabel.Groente),
+    //   new CarrIngr(3, 'Eieren', CarrLabel.Andere),
+    //   new CarrIngr(4, 'Melk', CarrLabel.Zuivel)
+    // ]
   }
 
 }

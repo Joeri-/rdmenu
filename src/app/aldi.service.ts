@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
 
-enum AldiLabel {
+export enum AldiLabel {
   'Droge voeding', 
   'Groente',
   'Fruit',
@@ -28,13 +30,13 @@ export class AldiService {
 
   aldiIngr: AldiIngr[];
 
-  constructor() {
-    this.aldiIngr = [
-      new AldiIngr(1, 'Schnitzel', AldiLabel.Vlees),
-      new AldiIngr(2, 'Wortelen', AldiLabel.Groente),
-      new AldiIngr(3, 'Eieren', AldiLabel.Andere),
-      new AldiIngr(4, 'Melk', AldiLabel.Zuivel)
-    ]
+  constructor(private http: Http) {}
+
+  getAldiIngr(): Observable<AldiIngr[]> {
+    return this.http
+                .get('/api/aldi')
+                .map((res) => res.json())
+                .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
 }

@@ -7,11 +7,20 @@
           </div>
 
           <table class="ui teal table">
+            <thead>
+              <tr>
+                <th>Naam</th>
+                <th>Label</th>
+              </tr>
+            </thead>
             <tbody>
               <tr *ngFor="let ingr of ingrAldi">
                 <td class="selectable">
                   <a href="" class="">{{ingr.name}}</a>
-                  </td>
+                </td>
+                <td class="selectable">
+                  <a href="" class="">{{getLabel(ingr.label)}}</a>
+                </td>
               </tr>
             </tbody>
           </table>
