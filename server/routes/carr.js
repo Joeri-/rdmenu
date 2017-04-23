@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
         name : req.body.name,
         label : req.body.label 
     })
-    .then(todo => {
+    .then(ingr => {
         Carr.find()
         .then(ingrCarr => res.json(ingrCarr));
     })

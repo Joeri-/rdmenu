@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
         text : req.body.text,
         done : false
     })
-    .then(todo => {
+    .then(recipe => {
         Carr.find()
         .then(ingrCarr => res.json(ingrCarr));
     })

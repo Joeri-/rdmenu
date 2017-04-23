@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
         name : req.body.name,
         label : req.body.label
     })
-    .then(todo => {
+    .then(ingr => {
         Aldi.find()
         .then(ingrAldi => res.json(ingrAldi));
     })
