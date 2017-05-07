@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
 
 export enum CarrLabel{
   'Droge voeding', 
@@ -28,13 +30,14 @@ export class CarrService {
 
   carrIngr: CarrIngr[];
 
-  constructor() {
-    // this.carrIngr = [
-    //   new CarrIngr(1, 'Schnitzel', CarrLabel.Vlees),
-    //   new CarrIngr(2, 'Wortelen', CarrLabel.Groente),
-    //   new CarrIngr(3, 'Eieren', CarrLabel.Andere),
-    //   new CarrIngr(4, 'Melk', CarrLabel.Zuivel)
-    // ]
+  constructor(private http: Http) {}
+
+  getAldiIngr(): Observable<CarrIngr[]> {
+    return this.http
+                .get('/api/carr')
+                .map((res) => res.json())
+                .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
 }
+

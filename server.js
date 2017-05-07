@@ -30,4 +30,5 @@ app.get('/', (req, res) => {
 // Different REST endpoints
 app.use('/api/aldi', require('./server/routes/aldi'));
 app.use('/api/carr', require('./server/routes/carr'));
-app.use('/api/recipes', require('./server/routes/recipes'));
+app.use('/api/recipe', require('./server/routes/recipe'));
+app.use('/api/category', require('./server/routes/category'));

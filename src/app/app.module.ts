@@ -8,14 +8,15 @@ import { AppComponent } from './app.component';
 
 import { MainComponent } from './main/main.component';
 import { MealsService } from './meals.service';
-import { GlobalService } from './global.service';
 import { AldiService } from './aldi.service';
 import { CarrService } from './carr.service';
 import { RecipesService } from './recipes.service';
+import { CategoriesService } from './categories.service';
 import { IngrAldiComponent } from './ingr-aldi/ingr-aldi.component';
 import { GeneratorComponent } from './generator/generator.component';
 import { IngrCarrComponent } from './ingr-carr/ingr-carr.component';
 import { RecipesComponent } from './recipes/recipes.component';
+import { CreateIngrComponent } from './create-ingr/create-ingr.component';
 
 const appRoutes: Routes = [
   { path: '', component: GeneratorComponent},
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     IngrAldiComponent,
     GeneratorComponent,
     IngrCarrComponent,
-    RecipesComponent
+    RecipesComponent,
+    CreateIngrComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -41,10 +43,10 @@ const appRoutes: Routes = [
   ],
   providers: [
    MealsService,
-   GlobalService,
    CarrService,
    AldiService,
-   RecipesService
+   RecipesService,
+   CategoriesService
   ],
   bootstrap: [AppComponent]
 })

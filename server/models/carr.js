@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 let Carr = mongoose.model('Carr', {
-    text: String,
+    name : String,
     label: Number
 })
 

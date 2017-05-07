@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 import { AldiLabel, AldiIngr, AldiService } from '../aldi.service';
 
 @Component({
@@ -9,12 +10,13 @@ import { AldiLabel, AldiIngr, AldiService } from '../aldi.service';
 export class IngrAldiComponent implements OnInit {
 
   ingrAldi: AldiIngr[];
+  gender: string;
 
-  constructor( private aldi: AldiService ) { 
-    // this.ingrAldi = aldi.aldiIngr;
+  constructor( private aldi: AldiService,
+               private http: Http ) { 
   }
 
-  loadIngrAldi() {
+  loadIngrAldi(): void {
     this.aldi.getAldiIngr().subscribe(
       ingr => {
         this.ingrAldi = ingr;
@@ -25,6 +27,14 @@ export class IngrAldiComponent implements OnInit {
 
   getLabel(index: number): string {
     return AldiLabel[index];
+  }
+
+  submitForm(form: Object): void { 
+    console.log(form);
+    this.aldi.postAldiIngr(form).subscribe(
+      
+    );
+    this.loadIngrAldi();
   }
 
   ngOnInit() {

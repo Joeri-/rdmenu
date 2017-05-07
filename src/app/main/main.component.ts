@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Meal, MealsService } from '../meals.service';
-import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-main',
@@ -9,13 +8,10 @@ import { GlobalService } from '../global.service';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private global: GlobalService) {
+  constructor() {
    }
 
   ngOnInit() {
   }
 
-  switchTab(index: number) {
-    this.global.selected = index;
-  }
 }

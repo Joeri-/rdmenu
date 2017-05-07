@@ -1,0 +1,18 @@
+<div class="ten wide column centered">
+      <form class="{{classes}}" #form="ngForm" (ngSubmit)="submitForm(form.value)">
+        <div class="field">
+          <label>Ingrediënt</label>
+          <input type="text" name="ingredient" placeholder="Ingrediënt" ngModel required>
+        </div>
+        <div class="field">
+          <label>Categorie</label>
+          <div class="ui">
+            <input type="hidden" name="gender"[(ngModel)]="gender"/>
+              <select class="menu">
+                <option *ngFor="let cat of cats" value="{{cat.name}}">{{cat.name}}</option>
+              </select>
+          </div>
+        </div>
+        <button class="ui button" type="" (click)="saveIngredient()">Voeg toe</button>
+      </form>
+      </div>

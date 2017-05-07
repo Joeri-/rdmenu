@@ -39,4 +39,11 @@ export class AldiService {
                 .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
+  postAldiIngr(form: Object): Observable<AldiIngr> {
+    return this.http
+                .post(JSON.stringify(form), '/api/aldi', [])
+                .map((res) => res.json())
+                .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+  }
+
 }
