@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { Category } from './Category';
 
-import { AldiIngr } from './AldiIngr';
+import { Category } from '../Category';
+import { AldiIngr } from '../AldiIngr';
 
 @Injectable()
 export class CategoriesService {

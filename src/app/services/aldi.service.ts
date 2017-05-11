@@ -2,28 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
-export enum AldiLabel {
-  'Droge voeding', 
-  'Groente',
-  'Fruit',
-  'Vlees',
-  'Vis',
-  'Kip',
-  'Zuivel',
-  'Andere'
-}
-
-export class AldiIngr {
-  uuid: number;
-  name: string;
-  label: AldiLabel;
-
-  constructor(uuid: number, name: string, label: AldiLabel) {
-    this.uuid = uuid;
-    this.name = name;
-    this.label = label;
-  }
-}
+import { AldiIngr } from '../models/AldiIngr';
 
 @Injectable()
 export class AldiService {

@@ -5,12 +5,12 @@
           <div class="ui yellow segment header">
             <h1>Gerechten</h1>
           </div>
-
+          <app-create-recipe></app-create-recipe>
           <table class="ui yellow table">
             <tbody>
-              <tr *ngFor="let rec of Recipies">
+              <tr *ngFor="let rec of Recipes">
                 <td class="selectable">
-                  <a href="" class="">{{rec}}</a>
+                  <a href="" class="">{{rec.text}}</a>
                   </td>
               </tr>
             </tbody>

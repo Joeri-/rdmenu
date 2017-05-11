@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CarrLabel, CarrIngr, CarrService } from '../carr.service';
+import { CarrService } from '../services/carr.service';
+import { CarrLabel, CarrIngr } from '../models/CarrIngr';
 
 @Component({
   selector: 'app-ingr-carr',

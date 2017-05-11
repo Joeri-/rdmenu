@@ -7,16 +7,17 @@ import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from './app.component';
 
 import { MainComponent } from './main/main.component';
-import { MealsService } from './meals.service';
-import { AldiService } from './aldi.service';
-import { CarrService } from './carr.service';
-import { RecipesService } from './recipes.service';
-import { CategoriesService } from './categories.service';
+import { MealsService } from './services/meals.service';
+import { AldiService } from './services/aldi.service';
+import { CarrService } from './services/carr.service';
+import { RecipesService } from './services/recipes.service';
+import { CategoriesService } from './services/categories.service';
 import { IngrAldiComponent } from './ingr-aldi/ingr-aldi.component';
 import { GeneratorComponent } from './generator/generator.component';
 import { IngrCarrComponent } from './ingr-carr/ingr-carr.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { CreateIngrComponent } from './create-ingr/create-ingr.component';
+import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
 
 const appRoutes: Routes = [
   { path: '', component: GeneratorComponent},
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     GeneratorComponent,
     IngrCarrComponent,
     RecipesComponent,
-    CreateIngrComponent
+    CreateIngrComponent,
+    CreateRecipeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

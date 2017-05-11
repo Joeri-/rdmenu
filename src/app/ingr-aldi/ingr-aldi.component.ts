@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import { AldiLabel, AldiIngr, AldiService } from '../aldi.service';
+import { AldiService } from '../services/aldi.service';
+import { AldiLabel, AldiIngr } from '../models/AldiIngr';
 
 @Component({
   selector: 'app-ingr-aldi',
@@ -11,6 +12,7 @@ export class IngrAldiComponent implements OnInit {
 
   ingrAldi: AldiIngr[];
   gender: string;
+  show = false;
 
   constructor( private aldi: AldiService,
                private http: Http ) { 
@@ -39,6 +41,10 @@ export class IngrAldiComponent implements OnInit {
 
   ngOnInit() {
     this.loadIngrAldi();
+  }
+
+  showCreate() {
+    this.show = !this.show;
   }
 
 }
