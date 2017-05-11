@@ -11,6 +11,7 @@ import { Recipe } from '../models/Recipe';
 export class RecipesComponent implements OnInit {
 
   Recipes: Recipe[];
+  show = false;
 
   constructor( private recipesService: RecipesService) { }
 
@@ -20,6 +21,10 @@ export class RecipesComponent implements OnInit {
       error => console.log(error),
       () => console.log('Done returning Recipes')
     );
+  }
+
+  showCreate() {
+    this.show = !this.show;
   }
 
 }

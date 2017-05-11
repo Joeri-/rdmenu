@@ -10,6 +10,7 @@ import { CarrLabel, CarrIngr } from '../models/CarrIngr';
 export class IngrCarrComponent implements OnInit {
   
   ingrCarr: CarrIngr[];
+  show = false;
 
   constructor( private carr: CarrService) { 
     this.ingrCarr = carr.carrIngr;
@@ -20,6 +21,10 @@ export class IngrCarrComponent implements OnInit {
 
   getLabel(index: number): string {
     return CarrLabel[index];
+  }
+
+  showCreate() {
+    this.show = !this.show;
   }
 
 }
