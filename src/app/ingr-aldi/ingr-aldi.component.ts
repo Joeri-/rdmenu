@@ -34,9 +34,14 @@ export class IngrAldiComponent implements OnInit {
   submitForm(form: Object): void { 
     console.log(form);
     this.aldi.postAldiIngr(form).subscribe(
-      
+     res => {
+       console.log(res);
+     },
+      err => {
+        console.log(err);
+      }
     );
-    this.loadIngrAldi();
+    // this.loadIngrAldi();
   }
 
   ngOnInit() {

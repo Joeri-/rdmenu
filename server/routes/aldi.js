@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     Aldi.create({
         name : req.body.name,
-        label : req.body.label
+        label : +req.body.label
     })
     .then(ingr => {
         Aldi.find()

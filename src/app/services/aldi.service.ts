@@ -19,8 +19,11 @@ export class AldiService {
   }
 
   postAldiIngr(form: Object): Observable<AldiIngr> {
+
+    console.log('Posting to /api/aldi');
+
     return this.http
-                .post(JSON.stringify(form), '/api/aldi', [])
+                .post('/api/aldi', form)
                 .map((res) => res.json())
                 .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
